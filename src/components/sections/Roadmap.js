@@ -7,7 +7,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Section = styled.section`
   min-height: 100vh;
-  width: 100vw;
+  overflow-x: hidden;
+  min-width: 100vw;
   background-color: ${(props) => props.theme.body};
   position: relative;
 `;

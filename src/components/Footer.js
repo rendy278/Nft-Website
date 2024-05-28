@@ -7,7 +7,7 @@ import Instagram from "../Icons/Instagram";
 import Twitter from "../Icons/Twitter";
 import LinkInd from "../Icons/LinkedIn";
 const Footers = styled.section`
-  min-height: 100vh;
+  height: 100vh;
   width: 100vw;
   background-color: ${(props) => props.theme.body};
   position: relative;
@@ -19,6 +19,7 @@ const Footers = styled.section`
 const Container = styled.div`
   width: 75%;
   margin: 1rem auto;
+
   display: flex;
   justify-content: space-between;
   align-items: center;

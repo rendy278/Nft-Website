@@ -13,13 +13,13 @@ import img10 from "../../assets/Renft/bighead-10.svg";
 import { useRef } from "react";
 const Section = styled.section`
   height: 100%;
-  width: 100vw;
+  min-width: 100vw;
   background-color: ${(props) => props.theme.text};
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
-
+  overflow: hidden;
   & > *:first-child {
     animation-duration: 20s;
   }

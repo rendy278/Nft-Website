@@ -4,7 +4,8 @@ import Button from "../Button";
 import { dark } from "../../styles/Themes";
 const Section = styled.section`
   min-height: 100vh;
-  width: 100vw;
+  min-width: 100vw;
+  overflow-x: hidden;
   background-color: ${(props) => props.theme.text};
   display: flex;
   justify-content: center;

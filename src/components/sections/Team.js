@@ -14,7 +14,8 @@ import img10 from "../../assets/Renft/bighead-10.svg";
 import img11 from "../../assets/Renft/bighead.svg";
 const Section = styled.section`
   min-height: 100vh;
-  width: 100vw;
+  min-width: 100vw;
+  overflow-x: hidden;
   background-color: ${(props) => props.theme.body};
   position: relative;
   z-index: 1;

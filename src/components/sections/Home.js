@@ -5,7 +5,8 @@ import CoverVideo from "../CoverVideo";
 import RoundTextBlack from "../../assets/Rounded-Text-Black.png";
 const Section = styled.section`
   min-height: ${(props) => `calc(100vh - ${props.theme.navHeight})`};
-  width: 100vw;
+  min-width: 100vw;
+  overflow-x: hidden;
   position: relative;
   background-color: ${(props) => props.theme.body};
 `;

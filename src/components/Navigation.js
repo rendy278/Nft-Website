@@ -4,8 +4,9 @@ import Headroom from "react-headroom";
 import Logo from "./Logo";
 
 const Section = styled.section`
-  width: 100vw;
+  width: 100%;
   background-color: transparent;
+  overflow-x: hidden;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   &.scrolled {
     background-color: ${(props) => props.theme.body};

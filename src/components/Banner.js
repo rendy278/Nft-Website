@@ -11,7 +11,7 @@ import { dark } from "../styles/Themes";
 const Section = styled.section`
   background-color: ${(props) => `rgba(${props.theme.textRgba},0.9)`};
   width: 100vw;
-  height: 25rem;
+  height: 100%;
   position: relative;
   border-top: 2px solid ${(props) => props.theme.text};
   display: flex;
@@ -19,7 +19,6 @@ const Section = styled.section`
   align-items: center;
   overflow: hidden;
   @media (max-width: 640px) {
-    height: 30rem;
     flex-direction: column;
     justify-content: center;
   }
