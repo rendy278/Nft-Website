@@ -8,7 +8,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid ${(props) => props.theme.carouselColor};
-  margin: 3rem 0;
+  margin: 0.5rem 0;
 `;
 const Title = styled.div`
   font-size: ${(props) => props.theme.fontsm};
@@ -17,7 +17,6 @@ const Title = styled.div`
   font-weight: 600;
   justify-content: space-between;
   align-items: center;
-
   color: ${(props) => (props) => props.theme.body};
 `;
 const Reveal = styled.div`

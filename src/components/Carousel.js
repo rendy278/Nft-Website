@@ -19,9 +19,26 @@ import Arrow from "../assets/Arrow.svg";
 const Container = styled.div`
   width: 25vw;
   height: 70vh;
+  @media (max-width: 340px) {
+    min-height: 45vh;
+    width: 40vw;
+  }
+  @media (max-width: 640px) {
+    min-height: 40vh;
+    min-width: 60vw;
+  }
+  @media (max-width: 768px) {
+    height: 40vh;
+    width: 35vw;
+  }
+  @media (max-width: 884px) {
+    height: 40vh;
+    width: 36vw;
+  }
   .swiper {
     width: 100%;
     height: 100%;
+    position: relative;
   }
 
   .swiper-slide {
@@ -40,8 +57,12 @@ const Container = styled.div`
     background-image: url(${Arrow});
     background-position: center;
     background-size: cover;
+    cursor: pointer;
     &:after {
       display: none;
+    }
+    @media (max-width: 640px) {
+      width: 3.2rem;
     }
   }
   .swiper-button-prev {
@@ -49,12 +70,16 @@ const Container = styled.div`
     left: 0;
     width: 4rem;
     top: 56%;
+    cursor: pointer;
     transform: rotate(180deg);
     background-image: url(${Arrow});
     background-position: center;
     background-size: cover;
     &:after {
       display: none;
+    }
+    @media (max-width: 640px) {
+      width: 3.2rem;
     }
   }
 `;

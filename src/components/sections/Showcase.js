@@ -12,7 +12,7 @@ import img9 from "../../assets/Renft/bighead-9.svg";
 import img10 from "../../assets/Renft/bighead-10.svg";
 import { useRef } from "react";
 const Section = styled.section`
-  min-height: 100vh;
+  height: 100%;
   width: 100vw;
   background-color: ${(props) => props.theme.text};
   flex-direction: column;
@@ -55,7 +55,7 @@ const ImgContainer = styled.div`
 const Details = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 0.8rem 1rem;
+  padding: 1.2rem 2rem;
   background-color: ${(props) => props.theme.text};
   border: 2px solid ${(props) => props.theme.body};
   border-bottom-left-radius: 20px;

@@ -4,10 +4,13 @@ import styled from "styled-components";
 
 const VideoContainer = styled.div`
   width: 100%;
-
   video {
     width: 100%;
     height: auto;
+
+    @media (max-width: 640px) {
+      height: 35vh;
+    }
   }
 `;
 const CoverVideo = () => {

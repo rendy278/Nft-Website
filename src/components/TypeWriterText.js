@@ -6,10 +6,26 @@ const Title = styled.h2`
   text-transform: capitalize;
   color: ${(props) => props.theme.text};
   align-self: flex;
+  @media (max-width: 350px) {
+    font-size: ${(props) => props.theme.fontsm};
+    width: 100%;
+  }
+  @media (max-width: 640px) {
+    font-size: ${(props) => props.theme.fontmd};
+    text-align: center;
+    width: 80%;
+  }
+  @media (max-width: 768px) {
+    font-size: ${(props) => props.theme.fontxl};
+  }
 
   span {
     text-transform: uppercase;
     font-family: "Akaya Telivagala", cursive;
+    @media (max-width: 640px) {
+      font-size: ${(props) => props.theme.fontsm};
+      text-align: center;
+    }
   }
   .text-1 {
     color: #5ab2ff;
@@ -29,10 +45,25 @@ const SubTitle = styled.h3`
   margin-bottom: 1rem;
   width: 80%;
   align-self: flex-start;
+  @media (max-width: 640px) {
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  @media (max-width: 768px) {
+    margin-top: 1rem;
+  }
 `;
 const ButtonContainer = styled.div`
   width: 80%;
   align-self: flex-start;
+
+  @media (max-width: 640px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
 `;
 const TypeWriterText = () => {
   return (

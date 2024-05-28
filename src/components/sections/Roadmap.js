@@ -23,6 +23,10 @@ const Title = styled.h1`
   position: relative;
   border-bottom: 2px solid ${(props) => props.theme.text};
   width: fit-content;
+
+  @media (max-width: 640px) {
+    font-size: ${(props) => props.theme.fontxl};
+  }
 `;
 
 const SubTitle = styled.span`
@@ -30,6 +34,11 @@ const SubTitle = styled.span`
   font-size: ${(props) => props.theme.fontxl};
   text-transform: capitalize;
   color: ${(props) => props.theme.text};
+
+  @media (max-width: 640px) {
+    font-size: ${(props) => props.theme.fontlg};
+    font-weight: 600;
+  }
 `;
 
 const Text = styled.span`
@@ -39,6 +48,11 @@ const Text = styled.span`
   color: ${(props) => props.theme.text};
   font-weight: 400;
   margin: 0.5rem 0;
+
+  @media (max-width: 640px) {
+    font-size: ${(props) => props.theme.font};
+    font-weight: 600;
+  }
 `;
 
 const Container = styled.div`
@@ -49,6 +63,23 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
+
+  @media (max-width: 768px) {
+    width: 95%;
+    height: 150vh;
+  }
+  @media (max-width: 884px) {
+    width: 98%;
+    height: 150vh;
+  }
+  @media (max-width: 640px) {
+    width: 90%;
+    height: 200vh;
+  }
+  @media (max-width: 340px) {
+    width: 95%;
+    height: 250vh;
+  }
 `;
 
 const SvgContainer = styled.div`
@@ -75,16 +106,31 @@ const Items = styled.ul`
     div {
       border-radius: 40px 0 40px 0;
     }
+    @media (max-width: 640px) {
+      justify-content: center;
+      text-align: left;
+      div {
+        border-radius: 0 50px 0 50px;
+      }
+    }
   }
 
   & > *:nth-of-type(2n) {
     justify-content: end;
     text-align: left;
+
     li {
-      border-radius: 50px 0 50px 0;
+      border-radius: 0 50px 0 50px;
     }
     div {
       border-radius: 40px 0 40px 0;
+    }
+    @media (max-width: 640px) {
+      justify-content: center;
+      text-align: left;
+      div {
+        border-radius: 0 50px 0 50px;
+      }
     }
   }
 `;
@@ -93,6 +139,10 @@ const Item = styled.li`
   width: 100%;
   height: 100%;
   display: flex;
+
+  @media (max-width: 640px) {
+    justify-content: flex-end !important;
+  }
 `;
 
 const ItemContainer = styled.div`
@@ -100,6 +150,10 @@ const ItemContainer = styled.div`
   height: fit-content;
   padding: 1rem;
   border: 3px solid ${(props) => props.theme.text};
+
+  @media (max-width: 640px) {
+    width: 75%;
+  }
 `;
 
 const Box = styled.div`

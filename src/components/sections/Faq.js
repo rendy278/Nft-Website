@@ -1,22 +1,40 @@
 import styled from "styled-components";
 import Accordion from "../Accordion";
 import gsap from "gsap";
-import { useLayoutEffect, useRef } from "react";
+import { useLayoutEffect } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Section = styled.section`
   min-height: 100vh;
   width: 100vw;
   background-color: ${(props) => props.theme.text};
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 `;
+const Container = styled.div`
+  width: 75%;
+  margin: 2rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media (max-width: 640px) {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+  }
+`;
 
 const Title = styled.h1`
   font-size: ${(props) => props.theme.fontxxl};
+  @media (max-width: 640px) {
+    font-size: ${(props) => props.theme.fontxl};
+    margin: 1rem auto;
+  }
   text-transform: uppercase;
   color: ${(props) => props.theme.body};
   margin: 1rem auto;
@@ -24,27 +42,19 @@ const Title = styled.h1`
   width: fit-content;
 `;
 
-const Container = styled.div`
-  width: 75%;
-  margin: 2rem auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
-
 const Box = styled.div`
   width: 45%;
+  @media (max-width: 640px) {
+    width: 90%;
+  }
 `;
 
 const Faq = () => {
-  const ref = useRef(null);
   gsap.registerPlugin(ScrollTrigger);
 
   useLayoutEffect(() => {
-    let element = ref.current;
-
-    ScrollTrigger.create({
-      trigger: element,
+    const scrollTrigger = ScrollTrigger.create({
+      trigger: "#faq",
       start: "top top",
       end: "bottom top",
       pin: true,
@@ -53,12 +63,12 @@ const Faq = () => {
     });
 
     return () => {
-      ScrollTrigger.kill();
+      scrollTrigger.kill();
     };
   }, []);
 
   return (
-    <Section ref={ref} id="faq">
+    <Section id="faq">
       <Title>Faq</Title>
       <Container>
         <Box>

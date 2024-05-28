@@ -13,10 +13,16 @@ const VectorContainer = styled.div`
   width: 100%;
   height: 100%;
   overflow: hidden;
-
   svg {
     width: 100%;
     height: 100%;
+  }
+  @media (max-width: 640px) {
+    left: 1rem;
+    svg {
+      width: 100%;
+      height: 100%;
+    }
   }
 `;
 const Bounce = keyframes`
@@ -33,6 +39,10 @@ const Balls = styled.div`
   border-radius: 50%;
   background-color: ${(props) => props.theme.text};
   animation: ${Bounce} 0.8s linear infinite alternate;
+
+  @media (max-width: 640px) {
+    left: 1rem;
+  }
 `;
 const DrawSvg = () => {
   const ref = useRef(null);

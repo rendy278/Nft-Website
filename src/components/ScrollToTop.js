@@ -9,6 +9,7 @@ const Up = styled.div`
   cursor: pointer;
   border: 2px solid ${(props) => props.theme.text};
   display: flex;
+  z-index: 99999;
   justify-content: center;
   align-items: center;
   border-radius: 50%;

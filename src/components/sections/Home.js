@@ -16,6 +16,22 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 768px) {
+    width: 85%;
+  }
+
+  @media (max-width: 640px) {
+    width: 100%;
+    flex-direction: column-reverse;
+    & > *:first-child {
+      width: 100%;
+      margin-top: 2rem;
+    }
+  }
+  @media (max-width: 340px) {
+    min-height: 100vh;
+  }
 `;
 const Box = styled.div`
   width: 50%;
@@ -43,6 +59,23 @@ const Round = styled.div`
     height: auto;
     animation: ${Rotate} 6s linear infinite reverse;
   }
+  @media (max-width: 768px) {
+    bottom: 3rem;
+    right: 80%;
+  }
+  @media (max-width: 884px) {
+    bottom: 3rem;
+    right: 78%;
+  }
+  @media (max-width: 640px) {
+    bottom: 1rem;
+    right: 70%;
+  }
+  @media (max-width: 340px) {
+    right: 75%;
+    width: 4rem;
+    height: 4rem;
+  }
 `;
 const Circle = styled.span`
   width: 3rem;
@@ -58,11 +91,16 @@ const Circle = styled.span`
   transform: translate(-50%, -50%);
   color: ${(props) => props.theme.body};
   font-size: ${(props) => props.theme.fontxl};
+  @media (max-width: 340px) {
+    font-size: ${(props) => props.theme.fontmd};
+    width: 2rem;
+    height: 2rem;
+  }
 `;
 
 const Home = () => {
   return (
-    <Section>
+    <Section id="home">
       <Container>
         <Box>
           <TypeWriterText />

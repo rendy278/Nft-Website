@@ -7,8 +7,6 @@ const Section = styled.section`
   width: 100vw;
   background-color: ${(props) => props.theme.text};
   display: flex;
-  z-index: -1;
-  position: relative;
   justify-content: center;
   align-items: center;
 `;
@@ -18,6 +16,21 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (max-width: 640px) {
+    margin: 1rem auto;
+  }
+  @media (max-width: 640px) {
+    flex-direction: column;
+    & > *:last-child {
+      width: 100%;
+    }
+  }
+  @media (max-width: 768px) {
+    width: 90%;
+  }
+  @media (max-width: 884px) {
+    width: 95%;
+  }
 `;
 const Box = styled.div`
   width: 50%;
@@ -33,6 +46,18 @@ const Title = styled.h1`
   color: ${(props) => props.theme.body};
   align-self: flex-start;
   width: 80%;
+  @media (max-width: 640px) {
+    font-size: ${(props) => props.theme.fontmd};
+    text-align: center;
+    width: 90%;
+    margin-top: 1rem;
+  }
+  @media (max-width: 768px) {
+    font-size: ${(props) => props.theme.fontxl};
+  }
+  @media (max-width: 884px) {
+    font-size: ${(props) => props.theme.fontxl};
+  }
   margin: 0 auto;
 `;
 const SubText = styled.p`
@@ -42,6 +67,17 @@ const SubText = styled.p`
   width: 80%;
   font-weight: 400;
   margin: 1rem auto;
+  @media (max-width: 640px) {
+    font-size: ${(props) => props.theme.fontsm};
+    text-align: center;
+    width: 90%;
+  }
+  @media (max-width: 768px) {
+    font-size: ${(props) => props.theme.fontmd};
+  }
+  @media (max-width: 884px) {
+    font-size: ${(props) => props.theme.fontmd};
+  }
 `;
 const SubTextLight = styled.p`
   font-size: ${(props) => props.theme.fontmd};
@@ -50,11 +86,27 @@ const SubTextLight = styled.p`
   width: 80%;
   font-weight: 400;
   margin: 1rem auto;
+  @media (max-width: 640px) {
+    font-size: ${(props) => props.theme.fontsm};
+    text-align: center;
+    width: 90%;
+  }
+  @media (max-width: 768px) {
+    font-size: ${(props) => props.theme.fontsm};
+  }
+  @media (max-width: 884px) {
+    font-size: ${(props) => props.theme.fontsm};
+  }
 `;
 const ButtonContainer = styled.div`
   align-self: flex-start;
   width: 80%;
   margin: 1rem auto;
+  @media (max-width: 640px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 const About = () => {
   return (

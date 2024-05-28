@@ -17,6 +17,7 @@ const Section = styled.section`
   width: 100vw;
   background-color: ${(props) => props.theme.body};
   position: relative;
+  z-index: 1;
 `;
 
 const Title = styled.h1`
@@ -31,7 +32,7 @@ const Title = styled.h1`
   width: fit-content;
 `;
 const Container = styled.div`
-  width: 75%;
+  width: 95%;
   margin: auto;
   display: flex;
   align-items: center;
@@ -42,7 +43,7 @@ const Item = styled.div`
   width: calc(20rem - 4vw);
   padding: 1rem 0;
   color: ${(props) => props.theme.body};
-  margin: 2rem 1rem;
+  margin: 1rem 1rem;
   border: 2px solid ${(props) => props.theme.text};
   border-radius: 20px;
   cursor: pointer;

@@ -18,6 +18,11 @@ const Section = styled.section`
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
+  @media (max-width: 640px) {
+    height: 30rem;
+    flex-direction: column;
+    justify-content: center;
+  }
 `;
 const ImgContainer = styled.div`
   width: 100%;
@@ -43,12 +48,21 @@ const Title = styled.h1`
   width: 35%;
   display: flex;
   justify-content: center;
+  @media (max-width: 640px) {
+    width: 100%;
+    font-size: ${(props) => props.theme.fontxl};
+    text-align: center;
+  }
 `;
 const BtnContainer = styled.div`
   width: 35%;
   display: flex;
   justify-content: center;
   font-size: ${(props) => props.theme.fontxl};
+  @media (max-width: 640px) {
+    font-size: ${(props) => props.theme.fontlg};
+    width: 50%;
+  }
 `;
 const Banner = () => {
   return (

@@ -12,8 +12,8 @@ const Footers = styled.section`
   background-color: ${(props) => props.theme.body};
   position: relative;
   display: flex;
-  // justify-content: center;
-  // align-items: center;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
 `;
 const Container = styled.div`
@@ -23,13 +23,18 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid ${(props) => props.theme.text};
+  @media (max-width: 884px) {
+    flex-direction: column;
+  }
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const IconList = styled.div`
   display: flex;
   align-items: center;
   margin: 1rem auto;
-
   & > * {
     padding-right: 0.5rem;
     transform: all 0.2 ease;
@@ -44,6 +49,12 @@ const Left = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @media (max-width: 884px) {
+    margin: 1em 0;
+  }
+  @media (max-width: 768px) {
+    margin: 1em 0;
+  }
 `;
 const MenuItems = styled.ul`
   list-style: none;
@@ -53,6 +64,10 @@ const MenuItems = styled.ul`
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
   grid-gap: 1rem;
+  place-items: center;
+  @media (max-width: 640px) {
+    width: 100%;
+  }
 `;
 const Item = styled.li`
   width: fit-content;
@@ -75,7 +90,14 @@ const Bottom = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  @media (max-width: 640px) {
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    gap: 1rem;
+  }
   a {
     text-decoration: underline;
     font-weight: 600;
