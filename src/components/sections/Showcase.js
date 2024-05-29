@@ -60,9 +60,17 @@ const Details = styled.div`
   border: 2px solid ${(props) => props.theme.body};
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-
+  @media (max-width: 768px) {
+    width: 9rem;
+  }
+  @media (max-width: 884px) {
+    width: 10rem;
+  }
+  @media (max-width: 640px) {
+    width: 8rem;
+  }
   span {
-    font-size: ${(props) => props.theme.fontsm};
+    font-size: ${(props) => props.theme.fontmd};
     color: ${(props) => `rgba(${props.theme.bodyRgba},0.5)`};
     font-weight: 600;
   }

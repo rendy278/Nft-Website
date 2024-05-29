@@ -112,16 +112,16 @@ const Footer = () => {
         <Left>
           <Logo />
           <IconList>
-            <a href="#" target="_blank" rel="noopener">
+            <a href="/" target="_blank" rel="noopener">
               <Facebook />
             </a>
-            <a href="#" target="_blank" rel="noopener">
+            <a href="/" target="_blank" rel="noopener">
               <Instagram />
             </a>
-            <a href="#" target="_blank" rel="noopener">
+            <a href="/" target="_blank" rel="noopener">
               <Twitter />
             </a>
-            <a href="#" target="_blank" rel="noopener">
+            <a href="/" target="_blank" rel="noopener">
               <LinkInd />
             </a>
           </IconList>
